@@ -9,7 +9,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#222;background:#fff;height:100%}
 
-/* Flex centralizado */
+/* Flex centralizado (mantém passos 1–4) */
 body {
   display:flex;
   justify-content:center;
@@ -142,6 +142,15 @@ p{color:#222;margin:10px 0 16px}
 .highlight-btn {
   background: #3498db !important;
   color: #fff !important;
+}
+
+/* Corrige apenas o passo 5 (ofertas) para ser rolável */
+.quiz-step.offers-step {
+  display:block !important;
+  align-items:stretch !important;
+  justify-content:flex-start !important;
+  min-height:auto !important;
+  text-align:center;
 }
 
 /* Responsive */
