@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pintando a Palavra — Quiz</title>
+  <title>Coloreando la Palabra — Quiz</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Ajustes extra para diferenciar ofertas */
+    .btn.secondary {
+      background: #fff;
+      border: 2px solid #007BFF;
+      color: #007BFF;
+      margin-top: 10px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .btn.secondary:hover {
+      background: #007BFF;
+      color: #fff;
+    }
+    .badge {
+      background: #ff9800;
+      color: #fff;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+    .quiz-step {
+      text-align: center;
+    }
+    .price {
+      font-size: 1.4rem;
+      margin: 10px 0;
+    }
+  </style>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -29,99 +64,113 @@
   <div id="progress"></div>
 
   <div class="quiz-container">
-    <img src="logo.png" alt="Pintando a Palavra" class="logo">
+    <img src="logo.png" alt="Coloreando la Palabra" class="logo">
 
-    <!-- Passo 1 -->
+    <!-- Paso 1 -->
     <section class="quiz-step active">
-      <h1>Bem-vindo ao Pintando a Palavra</h1>
-      <p>Descubra em <b>menos de 1 minuto</b> como transformar o tempo de tela em <b>fé, aprendizado e diversão</b> para sua família.</p>
-      <button class="btn next">Começar Quiz →</button>
+      <h1>Bienvenido a Coloreando la Palabra</h1>
+      <p>Descubre en <b>menos de 1 minuto</b> cómo transformar el tiempo frente a la pantalla en <b>fe, aprendizaje y diversión</b> para tu familia.</p>
+      <button class="btn next">Comenzar Quiz →</button>
     </section>
 
-    <!-- Passo 2 -->
+    <!-- Paso 2 -->
     <section class="quiz-step">
-      <h2>Quantos anos tem seu filho(a)?</h2>
-      <p>Isso nos ajuda a recomendar a melhor experiência 👇</p>
+      <h2>¿Cuántos años tiene tu hijo(a)?</h2>
+      <p>Esto nos ayuda a recomendar la mejor experiencia 👇</p>
       <div class="options">
-        <button class="btn option next">3 anos</button>
-        <button class="btn option next">4 anos</button>
-        <button class="btn option next">5 anos ou mais</button>
+        <button class="btn option next">3 años</button>
+        <button class="btn option next">4 años</button>
+        <button class="btn option next">5 años o más</button>
       </div>
     </section>
 
-    <!-- Passo 3 -->
+    <!-- Paso 3 -->
     <section class="quiz-step">
-      <h2>O que você mais deseja para o tempo livre do seu filho(a)?</h2>
+      <h2>¿Qué deseas más para el tiempo libre de tu hijo(a)?</h2>
       <div class="options">
-        <button class="btn option next">🎨 Atividades divertidas e educativas</button>
-        <button class="btn option next">✝️ Ensinar sobre Deus brincando</button>
-        <button class="btn option next">👨‍👩‍👧 Momentos especiais em família</button>
-        <button class="btn option next">🌟 Tudo isso junto!</button>
+        <button class="btn option next">🎨 Actividades divertidas y educativas</button>
+        <button class="btn option next">✝️ Enseñar sobre Dios jugando</button>
+        <button class="btn option next">👨‍👩‍👧 Momentos especiales en familia</button>
+        <button class="btn option next">🌟 ¡Todo eso junto!</button>
       </div>
     </section>
 
-    <!-- Passo 4: Prova social (mantido) -->
+    <!-- Paso 4: Prueba social -->
     <section class="quiz-step">
-      <h2>O que os pais estão dizendo</h2>
+      <h2>Lo que dicen los padres</h2>
       <div class="testimonials">
         <article class="testimonial-card">
-          <img src="avatar1.jpg" alt="Débora, mãe do Miguel">
+          <img src="avatar1.jpg" alt="Débora, mamá de Miguel">
           <div>
-            <p>“Antes era só vídeo sem propósito. Agora, ele pede para <b>colorir histórias da Bíblia comigo</b>.”</p>
-            <span>— Débora, mãe do Miguel (5)</span>
+            <p>“Antes era solo videos sin propósito. Ahora, él pide <b>colorear historias de la Biblia conmigo</b>.”</p>
+            <span>— Débora, mamá de Miguel (5)</span>
           </div>
         </article>
         <article class="testimonial-card">
-          <img src="avatar2.jpg" alt="Marcos, pai da Ester">
+          <img src="avatar2.jpg" alt="Marcos, papá de Ester">
           <div>
-            <p>“Achei que seria só mais um app, <b>mas funciona off-line</b> e virou parte da nossa rotina.”</p>
-            <span>— Marcos, pai da Ester (4)</span>
+            <p>“Pensé que sería solo otra app, <b>pero funciona sin conexión</b> y se volvió parte de nuestra rutina.”</p>
+            <span>— Marcos, papá de Ester (4)</span>
           </div>
         </article>
         <article class="testimonial-card">
-          <img src="avatar3.jpg" alt="Ana Paula, mãe do João">
+          <img src="avatar3.jpg" alt="Ana Paula, mamá de João">
           <div>
-            <p>“Finalmente algo <b>cristão e educativo</b> que meu filho ama usar.”</p>
-            <span>— Ana Paula, mãe do João (6)</span>
+            <p>“Finalmente algo <b>cristiano y educativo</b> que mi hijo ama usar.”</p>
+            <span>— Ana Paula, mamá de João (6)</span>
           </div>
         </article>
       </div>
       <button class="btn next">Continuar →</button>
     </section>
 
-    <!-- Passo 5: Oferta -->
+    <!-- Paso 5: Versión Básica -->
     <section class="quiz-step">
-      <h2>🎁 Seu acesso ao Pintando a Palavra está pronto</h2>
-      <p class="highlight">✨ Baseado nas suas respostas, este é o <b>pacote mais recomendado</b> para sua família.</p>
-      
-      <p class="price"><b>R$ 19,99</b> &nbsp; ou com &nbsp; <b>15% no Pix</b></p>
-      
+      <h2>🟡 VERSIÓN BÁSICA</h2>
+      <p class="price"><b>USD $5</b> (pago único)</p>
       <ul class="features">
-        <li>✔️ Histórias da Bíblia para colorir (App + PDF)</li>
-        <li>✔️ Atividades extras para aprender brincando</li>
-        <li>✔️ Funciona off-line após o primeiro acesso</li>
+        <li>✔️ Más de 100 páginas en PDF de artes bíblicas</li>
+        <li>✔️ 40 páginas en PDF de actividades</li>
+        <li>✔️ Portadas ilustradas de los libritos</li>
+        <li>✔️ Para imprimir y colorear en casa</li>
       </ul>
-      
-      <p class="alert">⚠ Oferta exclusiva para quem concluiu o quiz, disponível em sistema Android, tablet ou computador.</p>
-      
-      <a id="btnQuizConcluir" class="btn cta" href="https://pay.kiwify.com.br/kJal7Gv">Quero começar agora →</a>
+      <p class="alert">Perfecto para comenzar de forma sencilla, solo con los PDFs.</p>
+      <a id="btnBasica" class="btn cta" href="https://pay.kiwify.com.br/checkoutBASICA">Quiero esta versión →</a>
+      <br>
+      <a class="btn secondary next">👉 Mejor oferta</a>
+    </section>
+
+    <!-- Paso 6: Versión Completa -->
+    <section class="quiz-step">
+      <div class="badge">🔥 Mejor elección</div>
+      <h2>🔵 VERSIÓN COMPLETA</h2>
+      <p class="price"><b>USD $9.95</b> (pago único)</p>
+      <ul class="features">
+        <li>✔️ Más de 100 páginas en PDF de artes bíblicas</li>
+        <li>✔️ 120 páginas en PDF de actividades</li>
+        <li>✔️ Aplicación para colorear en celular, tablet y computadora</li>
+        <li>✔️ Funciona sin conexión</li>
+      </ul>
+      <p class="alert">¡La mejor elección! Un paquete completo: colorear en la app, imprimir los PDFs y divertirse sin conexión.</p>
+      <a id="btnCompleta" class="btn cta" href="https://pay.kiwify.com.br/checkoutCOMPLETA">Quiero la versión completa →</a>
     </section>
   </div>
 
   <script src="script.js"></script>
 
-  <!-- Evento Lead + InitiateCheckout -->
+  <!-- Eventos Pixel -->
   <script>
     document.addEventListener('DOMContentLoaded', function(){
-      const btnQuiz = document.getElementById('btnQuizConcluir');
-      if(btnQuiz){
-        btnQuiz.addEventListener('click', function(e){
-          e.preventDefault(); // impede a saída imediata
-          fbq('track', 'Lead', {content_name: 'Quiz Concluido'});
-          fbq('track', 'InitiateCheckout', {content_name: 'Quiz Oferta'});
-          setTimeout(() => {
-            window.location.href = btnQuiz.href; // redireciona após 300ms
-          }, 300);
+      const btnBasica = document.getElementById('btnBasica');
+      const btnCompleta = document.getElementById('btnCompleta');
+      if(btnBasica){
+        btnBasica.addEventListener('click', function(){
+          fbq('track', 'InitiateCheckout', {content_name: 'Checkout Básica'});
+        });
+      }
+      if(btnCompleta){
+        btnCompleta.addEventListener('click', function(){
+          fbq('track', 'InitiateCheckout', {content_name: 'Checkout Completa'});
         });
       }
     });
