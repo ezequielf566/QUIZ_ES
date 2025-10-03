@@ -37,17 +37,28 @@ html,body{
   text-align:center;
 }
 
-/* Steps */
+/* Steps padrão (1 a 4 centralizados) */
 .quiz-step{
   display:none;
   animation:fade .25s ease;
-  min-height:100vh;              /* ocupa tela toda */
+  min-height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:center;        /* centraliza vertical */
+  justify-content:center;
   align-items:center;
 }
 .quiz-step.active{display:flex}
+
+/* Passo 5 com rolagem normal */
+.quiz-step.offers-step {
+  display:none;
+  animation:fade .25s ease;
+  min-height:auto;
+  display:block;   /* volta ao fluxo normal */
+  text-align:center;
+}
+
+/* Títulos */
 h1{font-size:28px;margin:8px 0 6px}
 h2{font-size:24px;margin:6px 0 16px}
 p{color:#222;margin:10px 0 16px}
