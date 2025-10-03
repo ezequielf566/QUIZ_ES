@@ -89,22 +89,43 @@
       <button class="btn next">Continuar →</button>
     </section>
 
-    <!-- Paso 5: Oferta -->
+    <!-- Paso 5: Ofertas -->
     <section class="quiz-step">
       <h2>🎁 Tu acceso a Coloreando la Palabra está listo</h2>
       <p class="highlight">✨ Basado en tus respuestas, este es el <b>paquete más recomendado</b> para tu familia.</p>
       
-      <p class="price"><b>R$ 19,99</b> &nbsp; o con &nbsp; <b>15% en Pix</b></p>
-      
-      <ul class="features">
-        <li>✔️ Historias de la Biblia para colorear (App + PDF)</li>
-        <li>✔️ Actividades extra para aprender jugando</li>
-        <li>✔️ Funciona sin internet después del primer acceso</li>
-      </ul>
+      <div class="offers-container">
+        <!-- Oferta 1: Básica -->
+        <div class="offer-box">
+          <h3>🟡 Versión Básica</h3>
+          <p class="price"><b>USD $5</b> (pago único)</p>
+          <ul class="features">
+            <li>✔️ Más de 100 páginas en PDF de artes bíblicas</li>
+            <li>✔️ 40 páginas en PDF de actividades</li>
+            <li>✔️ Portadas ilustradas de los libritos</li>
+            <li>✔️ Para imprimir y colorear en casa</li>
+          </ul>
+          <p class="note">Perfecto para comenzar de forma sencilla, solo con los PDFs.</p>
+          <a class="btn cta" href="https://pay.kiwify.com.br/kJal7Gv">Elegir esta versión →</a>
+        </div>
+
+        <!-- Oferta 2: Completa (DESTACADA) -->
+        <div class="offer-box highlight-offer">
+          <div class="badge">⭐ Más recomendado</div>
+          <h3>🔵 Versión Completa</h3>
+          <p class="price"><b>USD $9.95</b> (pago único)</p>
+          <ul class="features">
+            <li>✔️ Más de 100 páginas en PDF de artes bíblicas</li>
+            <li>✔️ 120 páginas en PDF de actividades</li>
+            <li>✔️ Aplicación para colorear en celular, tablet y computadora</li>
+            <li>✔️ Funciona sin conexión</li>
+          </ul>
+          <p class="note">¡La mejor elección! Un paquete completo: colorear en la app, imprimir los PDFs y divertirse sin conexión.</p>
+          <a class="btn cta highlight-btn" href="https://pay.kiwify.com.br/kJal7Gv">Elegir esta versión →</a>
+        </div>
+      </div>
       
       <p class="alert">⚠ Oferta exclusiva para quienes completan el quiz, disponible en Android, tablet o computadora.</p>
-      
-      <a id="btnQuizConcluir" class="btn cta" href="https://pay.kiwify.com.br/kJal7Gv">Quiero empezar ahora →</a>
     </section>
   </div>
 
@@ -113,17 +134,17 @@
   <!-- Evento Lead + InitiateCheckout -->
   <script>
     document.addEventListener('DOMContentLoaded', function(){
-      const btnQuiz = document.getElementById('btnQuizConcluir');
-      if(btnQuiz){
-        btnQuiz.addEventListener('click', function(e){
+      const btns = document.querySelectorAll('.offer-box .btn.cta');
+      btns.forEach(btn => {
+        btn.addEventListener('click', function(e){
           e.preventDefault(); 
           fbq('track', 'Lead', {content_name: 'Quiz Completado'});
           fbq('track', 'InitiateCheckout', {content_name: 'Quiz Oferta'});
           setTimeout(() => {
-            window.location.href = btnQuiz.href;
+            window.location.href = btn.href;
           }, 300);
         });
-      }
+      });
     });
   </script>
 </body>
