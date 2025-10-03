@@ -53,6 +53,97 @@ p{color:#222;margin:10px 0 16px}
 .features li{padding:6px 0;border-bottom:1px dashed #eee}
 .alert{color:#b91c1c;font-size:14px;margin:12px 0}
 
+/* Highlight text */
+.highlight {
+  background: #fff9e6;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+/* Ofertas */
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.offer-box {
+  flex: 1 1 280px;
+  max-width: 360px;
+  background: #fff;
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin: 0 auto;
+  position: relative;
+}
+
+.offer-box h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.offer-box .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d35400;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.offer-box .note {
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+  color: var(--muted);
+}
+
+.offer-box .btn.cta {
+  margin-top: 15px;
+}
+
+/* Destaque da oferta completa */
+.highlight-offer {
+  border: 3px solid #3498db;
+  background: linear-gradient(180deg, #eaf6ff 0%, #ffffff 100%);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transform: scale(1.03);
+}
+
+.highlight-offer .badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3498db;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.highlight-offer .price {
+  color: #0056b3;
+}
+
+.highlight-btn {
+  background: #3498db !important;
+  color: #fff !important;
+}
+
 /* Responsive */
 @media (min-width:640px){
   .testimonials{grid-template-columns:1fr 1fr}
@@ -61,10 +152,3 @@ p{color:#222;margin:10px 0 16px}
   .testimonials{grid-template-columns:1fr 1fr 1fr}
 }
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.highlight {
-  background: #fff9e6;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 15px;
-  margin-bottom: 18px;
-}
