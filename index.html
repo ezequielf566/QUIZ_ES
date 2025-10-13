@@ -8,7 +8,7 @@
 
   <style>
     .btn.secondary {
-      background: #fff;
+      background: transparent;
       border: 2px solid #00FFFF;
       color: #00FFFF;
       margin-top: 10px;
@@ -16,20 +16,11 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
+      transition: 0.3s ease;
     }
     .btn.secondary:hover {
       background: #00FFFF;
       color: #0A0F1A;
-    }
-    .badge {
-      background: #3D8BF2;
-      color: #fff;
-      font-weight: bold;
-      padding: 6px 14px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-bottom: 12px;
-      font-size: 0.9rem;
     }
     .quiz-step {
       text-align: center;
@@ -44,9 +35,9 @@
     <img src="logo.png" alt="Seu Funil Pronto" class="logo">
 
     <!-- Passo 1 -->
-    <section class="quiz-step active">
+    <section class="quiz-step active" id="intro">
       <p class="subheadline">
-        Em poucos cliques, descubra qual tipo de funil vai fazer seu negócio atrair clientes e vender automaticamente — mesmo que você nunca tenha criado um antes.
+        Em poucos cliques, descubra o funil certo pra gerar mais <b>leads, clientes ou vendas</b> sem pagar mensalidades.
       </p>
       <button class="btn next">👉 Quero descobrir agora</button>
     </section>
@@ -55,7 +46,7 @@
     <section class="quiz-step">
       <h2>Qual dessas situações mais parece com a sua?</h2>
       <div class="options">
-        <button class="btn option next">Tenho produto/serviço, mas não consigo gerar vendas constantes.</button>
+        <button class="btn option next">Tenho produto ou serviço, mas não consigo gerar clientes com frequência.</button>
         <button class="btn option next">Já tentei criar um funil, mas não sei configurar direito.</button>
         <button class="btn option next">Pago caro em ferramentas mensais e quero parar com isso.</button>
         <button class="btn option next">Ainda não tenho nada pronto, quero começar certo.</button>
@@ -66,10 +57,10 @@
     <section class="quiz-step">
       <h2>Qual é o seu principal objetivo com um funil hoje?</h2>
       <div class="options">
-        <button class="btn option next">Vender mais todos os dias.</button>
-        <button class="btn option next">Captar leads e montar lista de contatos.</button>
-        <button class="btn option next">Agendar consultorias ou atendimentos.</button>
-        <button class="btn option next">Criar uma base de clientes pra longo prazo.</button>
+        <button class="btn option next">Gerar mais vendas automáticas.</button>
+        <button class="btn option next">Captar leads qualificados.</button>
+        <button class="btn option next">Agendar consultorias, atendimentos ou reuniões.</button>
+        <button class="btn option next">Criar uma base de contatos pra longo prazo.</button>
       </div>
     </section>
 
@@ -97,15 +88,17 @@
 
     <!-- Passo Final -->
     <section class="quiz-step">
-      <h2>✨ Seu negócio está pronto pra ter um Funil Dinâmico que vende por você!</h2>
+      <h2>✨ Seu negócio está pronto pra ter um Funil Dinâmico que gera resultados todos os dias!</h2>
       <p>
         Com base nas suas respostas, o ideal é um <b>Funil Pronto e Hospedado</b> — feito sob medida pro seu nicho, sem mensalidades e totalmente configurado.
       </p>
       <p>
-        Eu crio todo o seu funil dinâmico (quiz, páginas e copy), hospedo gratuitamente na Vercel e entrego o link pronto pra você vender.<br>
+        Eu crio toda a estrutura (quiz, páginas e copy), hospedo gratuitamente na Vercel e te entrego o link pronto pra usar.<br>
         <b>Sem assinaturas, sem complicação — e com suporte inicial incluso.</b>
       </p>
-      <a href="https://wa.me/5592995217196?text=Quero%20meu%20Funil%20Dinâmico%20Pronto" target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
+      <!-- link temporário de WhatsApp -->
+      <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
+         target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
 </body>
