@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pintando a Palavra — Quiz</title>
+  <title>Seu Funil Pronto — Quiz</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
     .btn.secondary {
       background: #fff;
-      border: 2px solid #007BFF;
-      color: #007BFF;
+      border: 2px solid #00FFFF;
+      color: #00FFFF;
       margin-top: 10px;
       padding: 10px 18px;
       border-radius: 8px;
@@ -18,11 +18,11 @@
       display: inline-block;
     }
     .btn.secondary:hover {
-      background: #007BFF;
-      color: #fff;
+      background: #00FFFF;
+      color: #0A0F1A;
     }
     .badge {
-      background: #ff9800;
+      background: #3D8BF2;
       color: #fff;
       font-weight: bold;
       padding: 6px 14px;
@@ -34,153 +34,79 @@
     .quiz-step {
       text-align: center;
     }
-    .price {
-      font-size: 1.4rem;
-      margin: 10px 0;
-    }
-    .android-note {
-      background: #fff9e6;
-      border: 1px dashed #ffca28;
-      border-radius: 10px;
-      padding: 10px 14px;
-      margin-top: 16px;
-      font-size: 15px;
-      color: #444;
-      line-height: 1.4;
-    }
-    .android-note small {
-      font-size: 13px;
-      color: #666;
-    }
   </style>
-
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1105530308227786');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1105530308227786&ev=PageView&noscript=1"/>
-  </noscript>
 </head>
+
 <body>
   <div id="progress"></div>
 
   <div class="quiz-container">
-    <img src="logo.png" alt="Pintando a Palavra" class="logo">
+    <img src="logo.png" alt="Seu Funil Pronto" class="logo">
 
     <!-- Passo 1 -->
     <section class="quiz-step active">
-      <h1>Pintando a Palavra</h1>
-      <p>Seu filho vive no celular?  
-      Descubra uma forma <b>gratuita</b> de transformar esse tempo em <b>fé e aprendizado</b>.</p>
-      <button class="btn next">Descobrir agora →</button>
+      <p class="subheadline">
+        Em poucos cliques, descubra qual tipo de funil vai fazer seu negócio atrair clientes e vender automaticamente — mesmo que você nunca tenha criado um antes.
+      </p>
+      <button class="btn next">👉 Quero descobrir agora</button>
     </section>
 
     <!-- Passo 2 -->
     <section class="quiz-step">
-      <h2>Quantos anos tem seu filho(a)?</h2>
-      <p>Escolha pra adaptar o conteúdo 👇</p>
+      <h2>Qual dessas situações mais parece com a sua?</h2>
       <div class="options">
-        <button class="btn option next">3 anos</button>
-        <button class="btn option next">4 anos</button>
-        <button class="btn option next">5 anos ou mais</button>
+        <button class="btn option next">Tenho produto/serviço, mas não consigo gerar vendas constantes.</button>
+        <button class="btn option next">Já tentei criar um funil, mas não sei configurar direito.</button>
+        <button class="btn option next">Pago caro em ferramentas mensais e quero parar com isso.</button>
+        <button class="btn option next">Ainda não tenho nada pronto, quero começar certo.</button>
       </div>
     </section>
 
     <!-- Passo 3 -->
     <section class="quiz-step">
-      <h2>O que mais te preocupa hoje?</h2>
+      <h2>Qual é o seu principal objetivo com um funil hoje?</h2>
       <div class="options">
-        <button class="btn option next">😣 Fica agitado depois do celular</button>
-        <button class="btn option next">📱 Passa o dia vendo vídeos vazios</button>
-        <button class="btn option next">👨‍👩‍👧 Não quer mais brincar em família</button>
-        <button class="btn option next">✝️ Quero algo cristão que acalme e ensine</button>
+        <button class="btn option next">Vender mais todos os dias.</button>
+        <button class="btn option next">Captar leads e montar lista de contatos.</button>
+        <button class="btn option next">Agendar consultorias ou atendimentos.</button>
+        <button class="btn option next">Criar uma base de clientes pra longo prazo.</button>
       </div>
     </section>
 
     <!-- Passo 4 -->
     <section class="quiz-step">
-      <h2>O que você mais deseja pros próximos dias?</h2>
+      <h2>Quanto tempo você quer pra colocar seu funil no ar?</h2>
       <div class="options">
-        <button class="btn option next">🌿 Mais calma e foco pro seu filho</button>
-        <button class="btn option next">📖 Histórias bíblicas simples e bonitas</button>
-        <button class="btn option next">🏡 Menos celular e mais paz em casa</button>
-        <button class="btn option next">✨ Tudo isso — e de graça!</button>
+        <button class="btn option next">Hoje mesmo!</button>
+        <button class="btn option next">Essa semana.</button>
+        <button class="btn option next">Dentro de 15 dias.</button>
+        <button class="btn option next">Ainda estou planejando.</button>
       </div>
     </section>
 
     <!-- Passo 5 -->
     <section class="quiz-step">
-      <h2>Qual dessas opções mais combina com você?</h2>
+      <h2>Você prefere um funil que...</h2>
       <div class="options">
-        <button class="btn option next">🙏 Ensinar sobre Deus de forma divertida</button>
-        <button class="btn option next">🎨 Atividades que envolvam criatividade</button>
-        <button class="btn option next">📚 Algo educativo e cristão ao mesmo tempo</button>
-        <button class="btn option next">👨‍👩‍👧 Momentos em família com propósito</button>
+        <button class="btn option next">Já venha pronto e hospedado.</button>
+        <button class="btn option next">Eu possa personalizar depois.</button>
+        <button class="btn option next">Seja fácil de duplicar pra outros projetos.</button>
+        <button class="btn option next">Tenha suporte pra ajustes iniciais.</button>
       </div>
-    </section>
-
-    <!-- Passo 6 -->
-    <section class="quiz-step">
-      <h2>O que os pais estão dizendo</h2>
-      <div class="testimonials">
-        <article class="testimonial-card">
-          <img src="avatar1.jpg" alt="Débora, mãe do Miguel">
-          <div>
-            <p>“Depois de <b>colorir os desenhos bíblicos</b>, ele vai dormir mais calmo.”</p>
-            <span>— Débora, mãe do Miguel (5)</span>
-          </div>
-        </article>
-        <article class="testimonial-card">
-          <img src="avatar2.jpg" alt="Marcos, pai da Ester">
-          <div>
-            <p>“Antes só queria vídeos, hoje se concentra <b>aprendendo com cada desenho</b>.”</p>
-            <span>— Marcos, pai da Ester (4)</span>
-          </div>
-        </article>
-        <article class="testimonial-card">
-          <img src="avatar3.jpg" alt="Ana Paula, mãe do João">
-          <div>
-            <p>“Virou <b>nosso momento de paz e fé em família</b>.”</p>
-            <span>— Ana Paula, mãe do João (6)</span>
-          </div>
-        </article>
-      </div>
-      <button class="btn next">Continuar →</button>
     </section>
 
     <!-- Passo Final -->
     <section class="quiz-step">
-      <h2>Transforme o tempo de tela em um tempo com Deus.</h2>
-      <p>Um app de <b>colorir histórias da Bíblia</b> que traz <b>paz, foco e aprendizado</b> — guiado por fé e propósito.</p>
-
-      <a id="btnFinal" class="btn cta" href="https://pintandoapalavra.vercel.app/login.html">Acessar gratuitamente →</a>
-      <small>Feito com amor para fortalecer a fé das famílias.</small>
+      <h2>✨ Seu negócio está pronto pra ter um Funil Dinâmico que vende por você!</h2>
+      <p>
+        Com base nas suas respostas, o ideal é um <b>Funil Pronto e Hospedado</b> — feito sob medida pro seu nicho, sem mensalidades e totalmente configurado.
+      </p>
+      <p>
+        Eu crio todo o seu funil dinâmico (quiz, páginas e copy), hospedo gratuitamente na Vercel e entrego o link pronto pra você vender.<br>
+        <b>Sem assinaturas, sem complicação — e com suporte inicial incluso.</b>
+      </p>
+      <a href="https://wa.me/5592995217196?text=Quero%20meu%20Funil%20Dinâmico%20Pronto" target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
-
-  <script src="script.js"></script>
-
-  <!-- Evento Pixel -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      const btnFinal = document.getElementById('btnFinal');
-      if(btnFinal){
-        btnFinal.addEventListener('click', function(){
-          fbq('track', 'Lead', {content_name: 'Acesso Gratuito - Quiz'});
-        });
-      }
-    });
-  </script>
 </body>
 </html>
