@@ -1,11 +1,23 @@
-const steps=[...document.querySelectorAll('.quiz-step')];
-const buttons=[...document.querySelectorAll('.next')];
-const progress=document.getElementById('progress');
-let i=0;
-function goNext(){
+// === SEU FUNIL PRONTO — SCRIPT PRINCIPAL ===
+// controla a navegação entre as etapas do quiz e a barra de progresso
+
+const steps = [...document.querySelectorAll('.quiz-step')];
+const buttons = [...document.querySelectorAll('.next, .option')]; // agora inclui .option
+const progress = document.getElementById('progress');
+let i = 0;
+
+function goNext() {
   steps[i].classList.remove('active');
   i++;
-  if(i<steps.length){steps[i].classList.add('active');progress.style.width=(i/(steps.length-1))*100+'%';}
+
+  if (i < steps.length) {
+    steps[i].classList.add('active');
+    progress.style.width = (i / (steps.length - 1)) * 100 + '%';
+  }
 }
-buttons.forEach(b=>b.addEventListener('click',goNext));
+
+// adiciona evento de clique em todos os botões
+buttons.forEach(btn => btn.addEventListener('click', goNext));
+
+// garante que o primeiro passo apareça ao carregar
 steps[0].classList.add('active');
