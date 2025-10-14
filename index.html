@@ -24,7 +24,6 @@
     }
 
     .quiz-step {
-      text-align: center;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -34,7 +33,11 @@
       visibility: visible;
     }
 
-    /* alinhamento à esquerda só no texto da primeira tela */
+    /* ===== alinhamento à esquerda só no texto da primeira tela ===== */
+    #intro {
+      text-align: center;
+    }
+
     #intro .subheadline {
       text-align: left;
       color: #d5eaff;
@@ -48,7 +51,7 @@
       margin: 0 auto;
     }
 
-    /* ===== Layout do passo final ===== */
+    /* ===== layout do passo final ===== */
     .quiz-step:last-of-type {
       text-align: left;
       padding-top: 10px;
@@ -60,6 +63,7 @@
       color: #00FFFF;
       margin-bottom: 14px;
       font-weight: 600;
+      text-align: justify;
     }
 
     .quiz-step:last-of-type p {
@@ -95,10 +99,10 @@
   <div id="progress"></div>
 
   <div class="quiz-container">
-    <img src="logo.png" alt="Seu Funil Pronto" class="logo">
 
-    <!-- Passo 1 -->
+    <!-- Passo 1 (com logo visível apenas aqui) -->
     <section class="quiz-step active" id="intro">
+      <img src="logo.png" alt="Seu Funil Pronto" class="logo">
       <p class="subheadline">
         Em poucos cliques, descubra o <b>funil certo</b> pra atrair pessoas e gerar resultados consistentes pro seu negócio.
       </p>
@@ -176,7 +180,7 @@
     </section>
   </div>
 
-  <!-- Script corrigido + efeito fade -->
+  <!-- Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const steps = Array.from(document.querySelectorAll(".quiz-step"));
