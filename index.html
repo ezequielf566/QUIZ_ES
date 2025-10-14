@@ -24,6 +24,13 @@
     }
     .quiz-step {
       text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    .quiz-step.active {
+      opacity: 1;
+      visibility: visible;
     }
   </style>
 </head>
@@ -101,5 +108,37 @@
          target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
+
+  <!-- Script corrigido + efeito fade -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const steps = Array.from(document.querySelectorAll(".quiz-step"));
+      const buttons = Array.from(document.querySelectorAll(".next, .option"));
+      const progress = document.getElementById("progress");
+      let i = 0;
+
+      // garante que o primeiro passo esteja ativo
+      steps.forEach((s, index) => s.classList.toggle("active", index === 0));
+
+      function goNext() {
+        if (i < steps.length - 1) {
+          // efeito fade out
+          steps[i].style.opacity = "0";
+          setTimeout(() => {
+            steps[i].classList.remove("active");
+            i++;
+            steps[i].classList.add("active");
+            steps[i].style.opacity = "1";
+
+            if (progress) {
+              progress.style.width = ((i / (steps.length - 1)) * 100) + "%";
+            }
+          }, 300);
+        }
+      }
+
+      buttons.forEach(btn => btn.addEventListener("click", goNext));
+    });
+  </script>
 </body>
 </html>
