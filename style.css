@@ -62,11 +62,18 @@ p {
   margin-bottom: 25px;
 }
 
+/* ======== TEXTO INICIAL ======== */
 .subheadline {
-  color: var(--branco);
+  color: var(--cinza);
   font-size: 1.05rem;
   line-height: 1.6;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.25);
+}
+
+/* Somente "funil certo" fica branco */
+.subheadline b {
+  color: var(--branco);
+  font-weight: 600;
 }
 
 .options {
