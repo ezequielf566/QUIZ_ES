@@ -24,6 +24,7 @@
     }
 
     .quiz-step {
+      text-align: center;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -33,10 +34,7 @@
       visibility: visible;
     }
 
-    #intro {
-      text-align: center;
-    }
-
+    /* alinhamento à esquerda só no texto da primeira tela */
     #intro .subheadline {
       text-align: left;
       color: #d5eaff;
@@ -45,55 +43,44 @@
       margin-bottom: 26px;
     }
 
+    /* mantém centralização do botão na tela inicial */
     #intro .btn {
       display: block;
       margin: 0 auto;
     }
 
-    /* ===== Layouts gerais e justificação ===== */
-    .quiz-step {
-      text-align: justify;
+    /* ===== Ajuste do layout do passo final ===== */
+    .quiz-step:last-of-type {
+      text-align: left;
+      padding-top: 10px;
     }
 
-    .quiz-step h2 {
-      color: #00FFFF;
+    .quiz-step:last-of-type h2 {
       font-size: 1.15rem;
       line-height: 1.5;
+      color: #00FFFF;
       margin-bottom: 14px;
       font-weight: 600;
-      text-align: justify;
     }
 
-    .quiz-step p {
+    .quiz-step:last-of-type p {
       color: #B8C2CC;
       line-height: 1.6;
       font-size: 0.95rem;
-      margin-bottom: 14px;
-      text-align: justify;
-      text-justify: inter-word;
-      hyphens: auto;
+      margin-bottom: 18px;
     }
 
-    .quiz-step b {
+    .quiz-step:last-of-type b {
       color: #FFFFFF;
+    }
+
+    .quiz-step:last-of-type .btn.secondary {
+      display: block;
+      margin: 22px auto 0 auto;
+      text-align: center;
+      border-width: 2px;
       font-weight: 600;
-    }
-
-    .price-highlight {
-      color: #00FFFF;
-      font-weight: 600;
-    }
-
-    /* ===== Efeito de destaque no botão ===== */
-    .btn.pulse {
-      animation: pulseGlow 2.2s infinite;
-      box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); transform: scale(1); }
-      50% { box-shadow: 0 0 25px rgba(0, 255, 255, 0.7); transform: scale(1.04); }
-      100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); transform: scale(1); }
+      padding: 12px 20px;
     }
   </style>
 </head>
@@ -102,17 +89,17 @@
   <div id="progress"></div>
 
   <div class="quiz-container">
+    <img src="logo.png" alt="Seu Funil Pronto" class="logo">
 
     <!-- Passo 1 -->
     <section class="quiz-step active" id="intro">
-      <img src="logo.png" alt="Seu Funil Pronto" class="logo">
       <p class="subheadline">
         Em poucos cliques, descubra o <b>funil certo</b> pra atrair pessoas e gerar resultados consistentes pro seu negócio.
       </p>
       <button class="btn next">👉 Quero descobrir agora</button>
     </section>
 
-    <!-- Perguntas -->
+    <!-- Passo 2 -->
     <section class="quiz-step">
       <h2>Qual dessas situações mais parece com a sua?</h2>
       <div class="options">
@@ -123,6 +110,7 @@
       </div>
     </section>
 
+    <!-- Passo 3 -->
     <section class="quiz-step">
       <h2>Qual é o seu principal objetivo com um funil hoje?</h2>
       <div class="options">
@@ -133,6 +121,7 @@
       </div>
     </section>
 
+    <!-- Passo 4 -->
     <section class="quiz-step">
       <h2>Quanto tempo você quer pra colocar seu funil no ar?</h2>
       <div class="options">
@@ -143,6 +132,7 @@
       </div>
     </section>
 
+    <!-- Passo 5 -->
     <section class="quiz-step">
       <h2>Você prefere um funil que...</h2>
       <div class="options">
@@ -153,41 +143,22 @@
       </div>
     </section>
 
-    <!-- Comparativo -->
+    <!-- Passo Final -->
     <section class="quiz-step">
       <h2>✨ Seu negócio está pronto pra ter um funil que gera resultados todos os dias!</h2>
-
       <p>
         Com base nas suas respostas, o ideal é um <b>Funil Pronto e Hospedado</b> — feito sob medida pro seu nicho, sem mensalidades e totalmente configurado.
       </p>
-
       <p>
-        Ferramentas como a <b>Inlead</b> cobram <span class="price-highlight">R$97 por mês</span> e ainda exigem uma hospedagem separada — que custa em média <span class="price-highlight">R$270</span> nos planos iniciais da HostGator.
+        Eu crio toda a estrutura (quiz, páginas e copy), hospedo gratuitamente na Vercel e te entrego o link pronto pra usar.<br>
+        <b>Sem assinaturas, sem complicação e com suporte inicial incluso.</b>
       </p>
-
-      <p>
-        Ou seja, além de sair mais caro, você ainda precisa configurar tudo sozinho.
-      </p>
-
-      <button class="btn next pulse">🔥 Ver uma oferta muito melhor</button>
-    </section>
-
-    <!-- Oferta -->
-    <section class="quiz-step">
-      <h2>💡 Uma solução completa e sem mensalidades</h2>
-
-      <p>
-        No meu serviço, o valor é o mesmo da <span class="price-highlight">Inlead — R$97</span>, mas com muito mais vantagem: você recebe o <b>funil completo e personalizado</b>, já <b>hospedado gratuitamente</b>, adaptado ao seu <b>nicho e objetivo</b>, e ainda ganha um <b>bônus exclusivo</b> com <b>três opções de logo</b> pra escolher, caso ainda não tenha uma identidade visual.
-      </p>
-
-      <p><b>Sem assinaturas, sem complicação e com suporte inicial incluso.</b></p>
-
-      <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Pronto%20e%20Hospedado"
+      <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
          target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
 
-  <!-- Script -->
+  <!-- Script corrigido + efeito fade -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const steps = Array.from(document.querySelectorAll(".quiz-step"));
@@ -205,7 +176,10 @@
             i++;
             steps[i].classList.add("active");
             steps[i].style.opacity = "1";
-            if (progress) progress.style.width = ((i / (steps.length - 1)) * 100) + "%";
+
+            if (progress) {
+              progress.style.width = ((i / (steps.length - 1)) * 100) + "%";
+            }
           }, 300);
         }
       }
