@@ -138,7 +138,7 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ======== LEITURA FLUIDA (PASSO FINAL) ======== */
+/* ======== LEITURA FLUIDA (PASSO FINAL JUSTIFICADO) ======== */
 .quiz-step:last-of-type {
   text-align: left;
   max-width: 460px;
@@ -154,11 +154,14 @@ p {
   margin-bottom: 16px;
 }
 
+/* Parágrafos justificados */
 .quiz-step:last-of-type p {
   color: var(--cinza);
   line-height: 1.65;
   font-size: 0.95rem;
   margin-bottom: 18px;
+  text-align: justify;       /* alinhamento justificado */
+  text-justify: inter-word;  /* distribuição entre palavras */
 }
 
 .quiz-step:last-of-type b {
