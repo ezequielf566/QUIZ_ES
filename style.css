@@ -35,7 +35,7 @@ body {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(0, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 36px 26px;
+  padding: 34px 26px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   text-align: center;
@@ -166,7 +166,7 @@ p {
   margin-bottom: 10px;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: -0.5px;
+  word-spacing: -0.3px;
   hyphens: auto;
 }
 
@@ -175,17 +175,19 @@ p {
   font-weight: 600;
 }
 
-/* Caixa comparativa integrada */
+/* Caixa comparativa perfeitamente integrada */
 .bonus-box {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(0, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 14px 16px;
-  margin: 10px 0;
+  padding: 12px 14px;
+  margin: 8px 0 12px 0;
   text-align: justify;
   color: var(--cinza);
-  line-height: 1.55;
+  line-height: 1.5;
   font-size: 0.95rem;
+  word-spacing: -0.3px;
+  hyphens: auto;
 }
 
 .bonus-box .price-highlight {
@@ -196,7 +198,7 @@ p {
 /* Botão final centralizado */
 .quiz-step:last-of-type .btn.secondary {
   display: block;
-  margin: 22px auto 0 auto;
+  margin: 18px auto 0 auto;
   text-align: center;
   border-width: 2px;
   font-weight: 600;
@@ -225,6 +227,7 @@ p {
 
   .bonus-box {
     padding: 12px 12px;
-    margin: 8px 0;
+    margin: 8px 0 10px 0;
+    line-height: 1.5;
   }
 }
