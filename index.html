@@ -7,105 +7,44 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    body {
-      margin: 0;
-      background: #0A0F1A;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .quiz-container {
-      width: 90%;
-      max-width: 480px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(0,255,255,0.1);
-      border-radius: 20px;
-      padding: 36px 28px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.1);
-      text-align: center;
-    }
-
-    .logo {
-      width: 160px;
-      margin: 0 auto 24px auto;
-      display: block;
-      filter: drop-shadow(0 0 6px rgba(0,255,255,0.3));
-    }
-
-    .subheadline {
-      font-size: 1.05rem;
-      color: #d5eaff;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      background: linear-gradient(90deg,#3D8BF2,#00FFFF);
-      color: #0A0F1A;
-      font-weight: 600;
-      padding: 14px 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 12px rgba(0,255,255,0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 20px rgba(0,255,255,0.5);
-    }
-
     .btn.secondary {
       background: transparent;
       border: 2px solid #00FFFF;
       color: #00FFFF;
-      margin-top: 14px;
+      margin-top: 10px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s ease;
     }
-
     .btn.secondary:hover {
       background: #00FFFF;
       color: #0A0F1A;
     }
-
     .quiz-step {
       text-align: center;
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.5s ease, visibility 0.5s ease;
     }
-
     .quiz-step.active {
       opacity: 1;
       visibility: visible;
-    }
-
-    @media (max-width:480px){
-      .subheadline {
-        font-size: 1rem;
-        margin-bottom: 20px;
-      }
-      .btn {
-        width: 100%;
-        font-size: 0.95rem;
-      }
     }
   </style>
 </head>
 
 <body>
+  <div id="progress"></div>
+
   <div class="quiz-container">
     <img src="logo.png" alt="Seu Funil Pronto" class="logo">
 
     <!-- Passo 1 -->
     <section class="quiz-step active" id="intro">
       <p class="subheadline">
-        Em poucos cliques, descubra o <b>funil certo</b> pra atrair pessoas e gerar resultados consistentes pro seu negócio.
+        Em poucos cliques, descubra o funil certo pra gerar mais <b>leads, clientes ou vendas</b> sem pagar mensalidades.
       </p>
       <button class="btn next">👉 Quero descobrir agora</button>
     </section>
@@ -164,29 +103,37 @@
         Eu crio toda a estrutura (quiz, páginas e copy), hospedo gratuitamente na Vercel e te entrego o link pronto pra usar.<br>
         <b>Sem assinaturas, sem complicação — e com suporte inicial incluso.</b>
       </p>
+      <!-- link temporário de WhatsApp -->
       <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
          target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
 
-  <!-- Script com transição suave -->
+  <!-- Script corrigido + efeito fade -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const steps = Array.from(document.querySelectorAll(".quiz-step"));
       const buttons = Array.from(document.querySelectorAll(".next, .option"));
+      const progress = document.getElementById("progress");
       let i = 0;
 
+      // garante que o primeiro passo esteja ativo
       steps.forEach((s, index) => s.classList.toggle("active", index === 0));
 
       function goNext() {
         if (i < steps.length - 1) {
+          // efeito fade out
           steps[i].style.opacity = "0";
           setTimeout(() => {
             steps[i].classList.remove("active");
             i++;
             steps[i].classList.add("active");
             steps[i].style.opacity = "1";
-          }, 250);
+
+            if (progress) {
+              progress.style.width = ((i / (steps.length - 1)) * 100) + "%";
+            }
+          }, 300);
         }
       }
 
