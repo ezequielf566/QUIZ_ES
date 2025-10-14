@@ -146,15 +146,19 @@ p {
   padding: 10px 10px;
 }
 
+/* Título justificado e equilibrado */
 .quiz-step:last-of-type h2 {
   font-size: 1.1rem;
   line-height: 1.45;
   color: var(--ciano);
   font-weight: 600;
   margin-bottom: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
-/* Parágrafos justificados e equilibrados */
+/* Parágrafos justificados e suaves */
 .quiz-step:last-of-type p {
   color: var(--cinza);
   line-height: 1.6;
