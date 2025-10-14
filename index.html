@@ -50,33 +50,31 @@
       margin: 0 auto;
     }
 
-    .quiz-step:last-of-type,
-    .quiz-step.offer-step {
-      text-align: left;
-      padding-top: 10px;
+    /* ===== Layouts gerais e justificação ===== */
+    .quiz-step {
+      text-align: justify;
     }
 
-    .quiz-step:last-of-type h2,
-    .quiz-step.offer-step h2 {
+    .quiz-step h2 {
+      color: #00FFFF;
       font-size: 1.15rem;
       line-height: 1.5;
-      color: #00FFFF;
       margin-bottom: 14px;
       font-weight: 600;
       text-align: justify;
     }
 
-    .quiz-step:last-of-type p,
-    .quiz-step.offer-step p {
+    .quiz-step p {
       color: #B8C2CC;
-      line-height: 1.55;
+      line-height: 1.6;
       font-size: 0.95rem;
       margin-bottom: 14px;
       text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
     }
 
-    .quiz-step:last-of-type b,
-    .quiz-step.offer-step b {
+    .quiz-step b {
       color: #FFFFFF;
       font-weight: 600;
     }
@@ -86,7 +84,7 @@
       font-weight: 600;
     }
 
-    /* ===== Animação Pulse para botão de transição ===== */
+    /* ===== Efeito de destaque no botão ===== */
     .btn.pulse {
       animation: pulseGlow 2.2s infinite;
       box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
@@ -155,7 +153,7 @@
       </div>
     </section>
 
-    <!-- Passo de Comparativo -->
+    <!-- Comparativo -->
     <section class="quiz-step">
       <h2>✨ Seu negócio está pronto pra ter um funil que gera resultados todos os dias!</h2>
 
@@ -171,16 +169,17 @@
         Ou seja, além de sair mais caro, você ainda precisa configurar tudo sozinho.
       </p>
 
-      <!-- Botão de transição com animação -->
       <button class="btn next pulse">🔥 Ver uma oferta muito melhor</button>
     </section>
 
-    <!-- Passo de Oferta -->
-    <section class="quiz-step offer-step">
+    <!-- Oferta -->
+    <section class="quiz-step">
       <h2>💡 Uma solução completa e sem mensalidades</h2>
+
       <p>
         No meu serviço, o valor é o mesmo da <span class="price-highlight">Inlead — R$97</span>, mas com muito mais vantagem: você recebe o <b>funil completo e personalizado</b>, já <b>hospedado gratuitamente</b>, adaptado ao seu <b>nicho e objetivo</b>, e ainda ganha um <b>bônus exclusivo</b> com <b>três opções de logo</b> pra escolher, caso ainda não tenha uma identidade visual.
       </p>
+
       <p><b>Sem assinaturas, sem complicação e com suporte inicial incluso.</b></p>
 
       <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Pronto%20e%20Hospedado"
