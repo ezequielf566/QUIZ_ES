@@ -35,7 +35,7 @@ body {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(0, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 36px 26px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   text-align: center;
@@ -58,8 +58,8 @@ h1, h2 {
 p {
   color: var(--cinza);
   font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 25px;
+  line-height: 1.55;
+  margin-bottom: 18px;
 }
 
 /* ======== TEXTO INICIAL ======== */
@@ -143,27 +143,27 @@ p {
   text-align: left;
   max-width: 460px;
   margin: 0 auto;
-  padding: 10px 10px;
+  padding: 10px 12px;
 }
 
-/* Título justificado e equilibrado */
+/* Título equilibrado */
 .quiz-step:last-of-type h2 {
   font-size: 1.1rem;
   line-height: 1.45;
   color: var(--ciano);
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
 }
 
-/* Parágrafos justificados e suaves */
+/* Parágrafos do último passo */
 .quiz-step:last-of-type p {
   color: var(--cinza);
-  line-height: 1.6;
+  line-height: 1.55;
   font-size: 0.95rem;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   text-align: justify;
   text-justify: inter-word;
   word-spacing: -0.5px;
@@ -172,16 +172,35 @@ p {
 
 .quiz-step:last-of-type b {
   color: var(--branco);
+  font-weight: 600;
 }
 
-/* botão final centralizado e com respiro */
+/* Caixa comparativa integrada */
+.bonus-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 10px 0;
+  text-align: justify;
+  color: var(--cinza);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.bonus-box .price-highlight {
+  color: #00FFFF;
+  font-weight: 600;
+}
+
+/* Botão final centralizado */
 .quiz-step:last-of-type .btn.secondary {
   display: block;
-  margin: 28px auto 0 auto;
+  margin: 22px auto 0 auto;
   text-align: center;
   border-width: 2px;
   font-weight: 600;
-  padding: 14px 22px;
+  padding: 12px 20px;
   max-width: 320px;
   line-height: 1.3;
 }
@@ -201,6 +220,11 @@ p {
   }
 
   .quiz-step:last-of-type {
-    padding: 8px 4px;
+    padding: 8px 6px;
+  }
+
+  .bonus-box {
+    padding: 12px 12px;
+    margin: 8px 0;
   }
 }
