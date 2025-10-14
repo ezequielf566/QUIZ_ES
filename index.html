@@ -43,13 +43,12 @@
       margin-bottom: 26px;
     }
 
-    /* mantém centralização do botão na tela inicial */
     #intro .btn {
       display: block;
       margin: 0 auto;
     }
 
-    /* ===== Ajuste do layout do passo final ===== */
+    /* ===== Ajuste visual e hierarquia no passo final ===== */
     .quiz-step:last-of-type {
       text-align: left;
       padding-top: 10px;
@@ -59,7 +58,7 @@
       font-size: 1.15rem;
       line-height: 1.5;
       color: #00FFFF;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       font-weight: 600;
     }
 
@@ -74,13 +73,30 @@
       color: #FFFFFF;
     }
 
+    /* destaque visual nos preços e vantagens */
+    .price-highlight {
+      color: #00FFFF;
+      font-weight: 700;
+    }
+
+    .bonus-box {
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 20px 0;
+      color: #E0F7FA;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
     .quiz-step:last-of-type .btn.secondary {
       display: block;
-      margin: 22px auto 0 auto;
+      margin: 26px auto 0 auto;
       text-align: center;
       border-width: 2px;
       font-weight: 600;
-      padding: 12px 20px;
+      padding: 13px 22px;
     }
   </style>
 </head>
@@ -146,13 +162,29 @@
     <!-- Passo Final -->
     <section class="quiz-step">
       <h2>✨ Seu negócio está pronto pra ter um funil que gera resultados todos os dias!</h2>
+
       <p>
         Com base nas suas respostas, o ideal é um <b>Funil Pronto e Hospedado</b> — feito sob medida pro seu nicho, sem mensalidades e totalmente configurado.
       </p>
+
       <p>
-        Eu crio toda a estrutura (quiz, páginas e copy), hospedo gratuitamente na Vercel e te entrego o link pronto pra usar.<br>
+        Ferramentas como a <b>Inlead</b> cobram <span class="price-highlight">R$97 por mês</span> e ainda exigem uma hospedagem separada — que custa em média <span class="price-highlight">R$270</span> nos planos iniciais da HostGator.
+      </p>
+
+      <p>
+        Ou seja, além de sair mais caro, você ainda precisa configurar tudo sozinho.
+      </p>
+
+      <div class="bonus-box">
+        No meu serviço, o valor é o mesmo da Inlead — <span class="price-highlight">R$97</span>, mas com muito mais vantagem:  
+        você recebe o <b>funil completo e personalizado</b>, já <b>hospedado gratuitamente</b>, adaptado ao seu <b>nicho e objetivo</b>,  
+        e ainda ganha um <b>bônus exclusivo</b> com <b>três opções de logo</b> pra escolher, caso ainda não tenha uma identidade visual.
+      </div>
+
+      <p>
         <b>Sem assinaturas, sem complicação e com suporte inicial incluso.</b>
       </p>
+
       <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
          target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
