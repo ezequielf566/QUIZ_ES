@@ -1,15 +1,18 @@
+/* =====================================================
+   SEU FUNIL PRONTO — STYLE.CSS
+   Tema futurista minimalista (azul elétrico e ciano)
+   ===================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --fundo: #0A0F1A;
   --azul: #3D8BF2;
   --ciano: #00FFFF;
+  --fundo: #0A0F1A;
   --branco: #FFFFFF;
-  --texto-claro: #EAF4FF;
-  --ciano-brilho: #1EE9FF;
+  --cinza: #B8C2CC;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -17,89 +20,85 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ===== BODY ===== */
 body {
   background: var(--fundo);
   color: var(--branco);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* ===== CONTAINER ===== */
 .quiz-container {
   width: 90%;
-  max-width: 480px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(0,255,255,0.1);
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 36px 28px;
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   text-align: center;
-  position: relative;
-  animation: brilho 4s ease-in-out infinite alternate;
-  box-shadow: 0 0 30px rgba(0,255,255,0.1);
+  transition: 0.4s ease;
 }
 
-/* Efeito de brilho leve */
-@keyframes brilho {
-  0% { box-shadow: 0 0 18px rgba(0,255,255,0.08); }
-  100% { box-shadow: 0 0 35px rgba(0,255,255,0.18); }
-}
-
-/* ===== LOGO ===== */
 .logo {
-  width: 160px;
-  margin: 0 auto 24px auto;
+  width: 180px;
+  margin: 0 auto 20px auto;
   display: block;
-  filter: drop-shadow(0 0 8px rgba(0,255,255,0.25));
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
 }
 
-/* ===== TEXTO INICIAL ===== */
-#intro .subheadline {
-  text-align: left;
-  color: var(--texto-claro);
+h1, h2 {
+  color: var(--ciano);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+p {
+  color: var(--cinza);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.subheadline {
+  color: var(--branco);
   font-size: 1.05rem;
   line-height: 1.6;
-  margin-bottom: 26px;
-  text-shadow: 0 0 8px rgba(0,255,255,0.25);
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
-#intro .subheadline b {
-  color: var(--ciano-brilho);
-  font-weight: 600;
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
 }
 
-#intro .btn {
-  display: block;
-  margin: 0 auto;
-}
-
-/* ===== BOTÕES ===== */
 .btn {
   background: linear-gradient(90deg, var(--azul), var(--ciano));
   color: var(--fundo);
   font-weight: 600;
-  padding: 14px 20px;
+  padding: 14px 18px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 12px rgba(0,255,255,0.25);
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(61, 139, 242, 0.3);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 .btn.secondary {
   background: transparent;
   border: 2px solid var(--ciano);
   color: var(--ciano);
-  margin-top: 14px;
+  box-shadow: none;
 }
 
 .btn.secondary:hover {
@@ -107,33 +106,15 @@ body {
   color: var(--fundo);
 }
 
-/* ===== ETAPAS ===== */
 .quiz-step {
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: none;
+  animation: fadeIn 0.6s ease;
 }
 
 .quiz-step.active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
-h2 {
-  color: var(--ciano);
-  margin-bottom: 14px;
-  font-weight: 600;
-}
-
-.options {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-/* ===== BARRA DE PROGRESSO ===== */
 #progress {
   position: fixed;
   top: 0;
@@ -145,29 +126,20 @@ h2 {
   z-index: 1000;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width:480px) {
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
   .quiz-container {
-    margin: 0 5%;
-    padding: 32px 22px;
+    padding: 25px 20px;
   }
-
-  #intro .subheadline {
-    font-size: 1rem;
-    color: #F4FAFF;
-    text-shadow: 0 0 6px rgba(0,255,255,0.3);
-  }
-
-  #intro .subheadline b {
-    color: var(--ciano-brilho);
-  }
-
-  .btn {
-    width: 100%;
-    font-size: 0.95rem;
-  }
-
   h2 {
     font-size: 1.2rem;
+  }
+  p, .btn {
+    font-size: 0.95rem;
   }
 }
