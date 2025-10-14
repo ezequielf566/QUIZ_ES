@@ -205,9 +205,9 @@ p {
   }
 }
 
-/* Corrige espaçamento dos títulos das perguntas 1, 2 e 3 (passos 2, 3 e 4) */
-.quiz-step:nth-of-type(3) h2,
-.quiz-step:nth-of-type(4) h2,
-.quiz-step:nth-of-type(5) h2 {
-  margin-bottom: 10px !important; /* igual ao espaçamento da pergunta 4 */
+/* Corrige o espaçamento dos títulos das perguntas 1, 2 e 3 (passos intermediários) */
+.quiz-container > section:nth-child(3) h2,
+.quiz-container > section:nth-child(4) h2,
+.quiz-container > section:nth-child(5) h2 {
+  margin-bottom: 10px !important;
 }
