@@ -22,6 +22,7 @@
       background: #00FFFF;
       color: #0A0F1A;
     }
+
     .quiz-step {
       text-align: center;
       opacity: 0;
@@ -31,6 +32,21 @@
     .quiz-step.active {
       opacity: 1;
       visibility: visible;
+    }
+
+    /* alinhamento à esquerda só no texto da primeira tela */
+    #intro .subheadline {
+      text-align: left;
+      color: #d5eaff;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
+    /* mantém centralização do resto */
+    #intro .btn {
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -44,7 +60,7 @@
     <!-- Passo 1 -->
     <section class="quiz-step active" id="intro">
       <p class="subheadline">
-        Em poucos cliques, descubra o funil certo pra gerar mais <b>leads, clientes ou vendas</b> sem pagar mensalidades.
+        Em poucos cliques, descubra o <b>funil certo</b> pra atrair pessoas e gerar resultados consistentes pro seu negócio.
       </p>
       <button class="btn next">👉 Quero descobrir agora</button>
     </section>
@@ -103,7 +119,6 @@
         Eu crio toda a estrutura (quiz, páginas e copy), hospedo gratuitamente na Vercel e te entrego o link pronto pra usar.<br>
         <b>Sem assinaturas, sem complicação — e com suporte inicial incluso.</b>
       </p>
-      <!-- link temporário de WhatsApp -->
       <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
          target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
@@ -117,12 +132,10 @@
       const progress = document.getElementById("progress");
       let i = 0;
 
-      // garante que o primeiro passo esteja ativo
       steps.forEach((s, index) => s.classList.toggle("active", index === 0));
 
       function goNext() {
         if (i < steps.length - 1) {
-          // efeito fade out
           steps[i].style.opacity = "0";
           setTimeout(() => {
             steps[i].classList.remove("active");
