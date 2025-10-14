@@ -13,6 +13,7 @@
   --cinza: #B8C2CC;
 }
 
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,7 @@ body {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(0, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 34px 26px;
+  padding: 40px 30px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   text-align: center;
@@ -49,6 +50,7 @@ body {
   filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
 }
 
+/* ===== TITULOS ===== */
 h1, h2 {
   color: var(--ciano);
   font-weight: 700;
@@ -59,7 +61,8 @@ p {
   color: var(--cinza);
   font-size: 1rem;
   line-height: 1.55;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  text-align: justify;
 }
 
 /* ======== TEXTO INICIAL ======== */
@@ -68,6 +71,7 @@ p {
   font-size: 1.05rem;
   line-height: 1.6;
   text-shadow: 0 0 5px rgba(0, 255, 255, 0.25);
+  text-align: left;
 }
 
 /* Somente "funil certo" fica branco */
@@ -76,6 +80,7 @@ p {
   font-weight: 600;
 }
 
+/* ===== BOTOES ===== */
 .options {
   display: flex;
   flex-direction: column;
@@ -101,6 +106,7 @@ p {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
+/* ===== BOTAO SECUNDARIO ===== */
 .btn.secondary {
   background: transparent;
   border: 2px solid var(--ciano);
@@ -113,6 +119,7 @@ p {
   color: var(--fundo);
 }
 
+/* ===== QUIZ ===== */
 .quiz-step {
   display: none;
   animation: fadeIn 0.6s ease;
@@ -133,41 +140,33 @@ p {
   z-index: 1000;
 }
 
+/* ===== ANIMAÇÃO ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ======== LEITURA FLUIDA E JUSTIFICADA (PASSO FINAL REFINADO) ======== */
+/* ===== PASSO FINAL ===== */
 .quiz-step:last-of-type {
   text-align: left;
-  max-width: 460px;
-  margin: 0 auto;
-  padding: 10px 12px;
+  padding-top: 10px;
 }
 
-/* Título equilibrado */
 .quiz-step:last-of-type h2 {
-  font-size: 1.1rem;
-  line-height: 1.45;
+  font-size: 1.15rem;
+  line-height: 1.5;
   color: var(--ciano);
-  font-weight: 600;
   margin-bottom: 14px;
+  font-weight: 600;
   text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
 }
 
-/* Parágrafos do último passo */
 .quiz-step:last-of-type p {
   color: var(--cinza);
   line-height: 1.55;
   font-size: 0.95rem;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   text-align: justify;
-  text-justify: inter-word;
-  word-spacing: -0.3px;
-  hyphens: auto;
 }
 
 .quiz-step:last-of-type b {
@@ -175,39 +174,22 @@ p {
   font-weight: 600;
 }
 
-/* Caixa comparativa perfeitamente integrada */
-.bonus-box {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin: 8px 0 12px 0;
-  text-align: justify;
-  color: var(--cinza);
-  line-height: 1.5;
-  font-size: 0.95rem;
-  word-spacing: -0.3px;
-  hyphens: auto;
-}
-
-.bonus-box .price-highlight {
-  color: #00FFFF;
+.price-highlight {
+  color: var(--ciano);
   font-weight: 600;
 }
 
 /* Botão final centralizado */
 .quiz-step:last-of-type .btn.secondary {
   display: block;
-  margin: 18px auto 0 auto;
+  margin: 20px auto 0 auto;
   text-align: center;
   border-width: 2px;
   font-weight: 600;
   padding: 12px 20px;
-  max-width: 320px;
-  line-height: 1.3;
 }
 
-/* ======== RESPONSIVIDADE ======== */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 480px) {
   .quiz-container {
     padding: 25px 20px;
@@ -223,11 +205,5 @@ p {
 
   .quiz-step:last-of-type {
     padding: 8px 6px;
-  }
-
-  .bonus-box {
-    padding: 12px 12px;
-    margin: 8px 0 10px 0;
-    line-height: 1.5;
   }
 }
