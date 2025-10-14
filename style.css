@@ -204,10 +204,3 @@ p {
     padding: 8px 4px;
   }
 }
-
-/* Corrige o espaçamento dos títulos das perguntas 1, 2 e 3 (passos intermediários) */
-.quiz-container > section:nth-child(3) h2,
-.quiz-container > section:nth-child(4) h2,
-.quiz-container > section:nth-child(5) h2 {
-  margin-bottom: 10px !important;
-}
