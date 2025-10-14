@@ -17,10 +17,29 @@
       font-weight: bold;
       display: inline-block;
       transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
     .btn.secondary:hover {
       background: #00FFFF;
       color: #0A0F1A;
+    }
+
+    /* Animação de brilho suave */
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      }
+    }
+
+    .btn.secondary.glow {
+      animation: pulseGlow 2.5s infinite ease-in-out;
     }
 
     .quiz-step {
@@ -73,7 +92,6 @@
       color: #FFFFFF;
     }
 
-    /* destaque visual nos preços e vantagens */
     .price-highlight {
       color: #00FFFF;
       font-weight: 700;
@@ -175,8 +193,8 @@
         Ou seja, além de sair mais caro, você ainda precisa configurar tudo sozinho.
       </p>
 
-      <div class="bonus-box">
-        No meu serviço, o valor é o mesmo da Inlead — <span class="price-highlight">R$97</span>, mas com muito mais vantagem:  
+      <div class="bonus-box" style="text-align: justify;">
+        No meu serviço, o valor é o mesmo da <span class="price-highlight">Inlead — R$97</span>, mas com muito mais vantagem:  
         você recebe o <b>funil completo e personalizado</b>, já <b>hospedado gratuitamente</b>, adaptado ao seu <b>nicho e objetivo</b>,  
         e ainda ganha um <b>bônus exclusivo</b> com <b>três opções de logo</b> pra escolher, caso ainda não tenha uma identidade visual.
       </div>
@@ -186,7 +204,7 @@
       </p>
 
       <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
-         target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
+         target="_blank" class="btn secondary glow">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
 
