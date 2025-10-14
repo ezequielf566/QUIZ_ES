@@ -33,7 +33,6 @@
       visibility: visible;
     }
 
-    /* ===== alinhamento à esquerda só no texto da primeira tela ===== */
     #intro {
       text-align: center;
     }
@@ -51,13 +50,14 @@
       margin: 0 auto;
     }
 
-    /* ===== layout do passo final ===== */
-    .quiz-step:last-of-type {
+    .quiz-step:last-of-type,
+    .quiz-step.offer-step {
       text-align: left;
       padding-top: 10px;
     }
 
-    .quiz-step:last-of-type h2 {
+    .quiz-step:last-of-type h2,
+    .quiz-step.offer-step h2 {
       font-size: 1.15rem;
       line-height: 1.5;
       color: #00FFFF;
@@ -66,7 +66,8 @@
       text-align: justify;
     }
 
-    .quiz-step:last-of-type p {
+    .quiz-step:last-of-type p,
+    .quiz-step.offer-step p {
       color: #B8C2CC;
       line-height: 1.55;
       font-size: 0.95rem;
@@ -74,23 +75,27 @@
       text-align: justify;
     }
 
-    .quiz-step:last-of-type b {
+    .quiz-step:last-of-type b,
+    .quiz-step.offer-step b {
       color: #FFFFFF;
       font-weight: 600;
-    }
-
-    .quiz-step:last-of-type .btn.secondary {
-      display: block;
-      margin: 20px auto 0 auto;
-      text-align: center;
-      border-width: 2px;
-      font-weight: 600;
-      padding: 12px 20px;
     }
 
     .price-highlight {
       color: #00FFFF;
       font-weight: 600;
+    }
+
+    /* ===== Animação Pulse para botão de transição ===== */
+    .btn.pulse {
+      animation: pulseGlow 2.2s infinite;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); transform: scale(1); }
+      50% { box-shadow: 0 0 25px rgba(0, 255, 255, 0.7); transform: scale(1.04); }
+      100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); transform: scale(1); }
     }
   </style>
 </head>
@@ -100,7 +105,7 @@
 
   <div class="quiz-container">
 
-    <!-- Passo 1 (com logo visível apenas aqui) -->
+    <!-- Passo 1 -->
     <section class="quiz-step active" id="intro">
       <img src="logo.png" alt="Seu Funil Pronto" class="logo">
       <p class="subheadline">
@@ -109,7 +114,7 @@
       <button class="btn next">👉 Quero descobrir agora</button>
     </section>
 
-    <!-- Passo 2 -->
+    <!-- Perguntas -->
     <section class="quiz-step">
       <h2>Qual dessas situações mais parece com a sua?</h2>
       <div class="options">
@@ -120,7 +125,6 @@
       </div>
     </section>
 
-    <!-- Passo 3 -->
     <section class="quiz-step">
       <h2>Qual é o seu principal objetivo com um funil hoje?</h2>
       <div class="options">
@@ -131,7 +135,6 @@
       </div>
     </section>
 
-    <!-- Passo 4 -->
     <section class="quiz-step">
       <h2>Quanto tempo você quer pra colocar seu funil no ar?</h2>
       <div class="options">
@@ -142,7 +145,6 @@
       </div>
     </section>
 
-    <!-- Passo 5 -->
     <section class="quiz-step">
       <h2>Você prefere um funil que...</h2>
       <div class="options">
@@ -153,7 +155,7 @@
       </div>
     </section>
 
-    <!-- Passo Final -->
+    <!-- Passo de Comparativo -->
     <section class="quiz-step">
       <h2>✨ Seu negócio está pronto pra ter um funil que gera resultados todos os dias!</h2>
 
@@ -169,13 +171,19 @@
         Ou seja, além de sair mais caro, você ainda precisa configurar tudo sozinho.
       </p>
 
+      <!-- Botão de transição com animação -->
+      <button class="btn next pulse">🔥 Ver uma oferta muito melhor</button>
+    </section>
+
+    <!-- Passo de Oferta -->
+    <section class="quiz-step offer-step">
+      <h2>💡 Uma solução completa e sem mensalidades</h2>
       <p>
         No meu serviço, o valor é o mesmo da <span class="price-highlight">Inlead — R$97</span>, mas com muito mais vantagem: você recebe o <b>funil completo e personalizado</b>, já <b>hospedado gratuitamente</b>, adaptado ao seu <b>nicho e objetivo</b>, e ainda ganha um <b>bônus exclusivo</b> com <b>três opções de logo</b> pra escolher, caso ainda não tenha uma identidade visual.
       </p>
-
       <p><b>Sem assinaturas, sem complicação e com suporte inicial incluso.</b></p>
 
-      <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Dinâmico%20Pronto"
+      <a href="https://wa.me/5599999999999?text=Quero%20meu%20Funil%20Pronto%20e%20Hospedado"
          target="_blank" class="btn secondary">👉 Quero meu Funil Pronto e Hospedado</a>
     </section>
   </div>
@@ -198,10 +206,7 @@
             i++;
             steps[i].classList.add("active");
             steps[i].style.opacity = "1";
-
-            if (progress) {
-              progress.style.width = ((i / (steps.length - 1)) * 100) + "%";
-            }
+            if (progress) progress.style.width = ((i / (steps.length - 1)) * 100) + "%";
           }, 300);
         }
       }
