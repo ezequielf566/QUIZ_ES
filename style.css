@@ -27,41 +27,44 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 40px 0;
 }
 
+/* ===== CONTAINER ===== */
 .quiz-container {
   width: 90%;
-  max-width: 500px;
+  max-width: 520px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(0, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  border-radius: 22px;
+  padding: 45px 32px 50px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
   backdrop-filter: blur(10px);
-  text-align: center;
   transition: 0.4s ease;
 }
 
+/* ===== LOGO ===== */
 .logo {
   width: 180px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 26px auto;
   display: block;
-  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.4));
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.5));
 }
 
 /* ===== TITULOS ===== */
 h1, h2 {
   color: var(--ciano);
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 
 p {
   color: var(--cinza);
   font-size: 1rem;
-  line-height: 1.55;
-  margin-bottom: 16px;
+  line-height: 1.65;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -69,12 +72,12 @@ p {
 .subheadline {
   color: var(--cinza);
   font-size: 1.05rem;
-  line-height: 1.6;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.25);
+  line-height: 1.7;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+  margin-bottom: 30px;
   text-align: left;
 }
 
-/* Somente "funil certo" fica branco */
 .subheadline b {
   color: var(--branco);
   font-weight: 600;
@@ -84,15 +87,15 @@ p {
 .options {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 10px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 .btn {
   background: linear-gradient(90deg, var(--azul), var(--ciano));
   color: var(--fundo);
   font-weight: 600;
-  padding: 14px 18px;
+  padding: 15px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -112,6 +115,7 @@ p {
   border: 2px solid var(--ciano);
   color: var(--ciano);
   box-shadow: none;
+  padding: 14px 22px;
 }
 
 .btn.secondary:hover {
@@ -140,7 +144,6 @@ p {
   z-index: 1000;
 }
 
-/* ===== ANIMAÇÃO ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -149,23 +152,23 @@ p {
 /* ===== PASSO FINAL ===== */
 .quiz-step:last-of-type {
   text-align: left;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 .quiz-step:last-of-type h2 {
-  font-size: 1.15rem;
-  line-height: 1.5;
+  font-size: 1.18rem;
+  line-height: 1.55;
   color: var(--ciano);
-  margin-bottom: 14px;
   font-weight: 600;
+  margin-bottom: 18px;
   text-align: justify;
 }
 
 .quiz-step:last-of-type p {
   color: var(--cinza);
-  line-height: 1.55;
-  font-size: 0.95rem;
-  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 0.97rem;
+  margin-bottom: 22px;
   text-align: justify;
 }
 
@@ -179,31 +182,43 @@ p {
   font-weight: 600;
 }
 
-/* Botão final centralizado */
+/* ===== ESPAÇAMENTO REFINADO ===== */
+.quiz-step:last-of-type p + p {
+  margin-top: 6px;
+}
+
+/* ===== BOTÃO FINAL ===== */
 .quiz-step:last-of-type .btn.secondary {
   display: block;
-  margin: 20px auto 0 auto;
+  margin: 32px auto 0 auto;
   text-align: center;
-  border-width: 2px;
   font-weight: 600;
-  padding: 12px 20px;
+  padding: 14px 28px;
+  max-width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
 }
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 480px) {
   .quiz-container {
-    padding: 25px 20px;
+    padding: 30px 22px 38px;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   p, .btn {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
   }
 
-  .quiz-step:last-of-type {
-    padding: 8px 6px;
+  .btn {
+    padding: 14px 16px;
+  }
+
+  .quiz-step:last-of-type .btn.secondary {
+    margin-top: 26px;
+    max-width: 300px;
   }
 }
